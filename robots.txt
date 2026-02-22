@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gospodar-kovka.github.io/vorota-galychyna/sitemap.xml

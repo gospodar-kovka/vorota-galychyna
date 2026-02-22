@@ -10,6 +10,8 @@ input{font-family:inherit}
 
 .hidden{display:none!important}
 .text-orange{color:#FF8C00}
+.skip-link{position:absolute;top:-100%;left:50%;transform:translateX(-50%);background:#FF8C00;color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;z-index:100;font-weight:600;transition:top .2s}
+.skip-link:focus{top:0}
 
 /* ===== CONTAINER ===== */
 .container{max-width:1280px;margin:0 auto;padding:0 16px}
