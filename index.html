@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ворота Галичина — Ворота-жалюзі | Виготовлення та монтаж</title>
+  <meta name="description" content="Ворота-жалюзі з оцинкованої сталі з полімерним покриттям. Виготовлення під ваші розміри, монтаж під ключ. Безкоштовний замір." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <svg class="logo__icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="7" y="6" width="30" height="5" rx="1.5" fill="#FF8C00"/>
+          <rect x="7" y="11" width="3" height="27" fill="#2C2E30"/>
+          <rect x="34" y="11" width="3" height="27" fill="#2C2E30"/>
+          <rect x="10" y="12" width="24" height="3" rx=".5" fill="#2C2E30"/>
+          <rect x="10" y="16.5" width="24" height="3" rx=".5" fill="#2C2E30"/>
+          <rect x="10" y="21" width="24" height="3" rx=".5" fill="#2C2E30"/>
+          <rect x="10" y="25.5" width="24" height="3" rx=".5" fill="#FF8C00" opacity=".85"/>
+          <rect x="10" y="30" width="24" height="3" rx=".5" fill="#FF8C00" opacity=".55"/>
+          <rect x="10" y="34.5" width="24" height="3" rx=".5" fill="#FF8C00" opacity=".3"/>
+          <line x1="5" y1="39" x2="39" y2="39" stroke="#2C2E30" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__title">Ворота</span>
+          <span class="logo__sub">Галичина</span>
+        </span>
+      </a>
+
+      <div class="header__right">
+        <a href="tel:+380673705288" class="header__phone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+38 (067) 370-52-88</span>
+        </a>
+        <a href="tel:+380931107969" class="header__phone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+38 (093) 110-79-69</span>
+        </a>
+        <button class="btn btn--primary" id="headerCta">Передзвонити</button>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="tel:+380673705288" class="header__phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+38 (067) 370-52-88</span>
+      </a>
+      <a href="tel:+380931107969" class="header__phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+38 (093) 110-79-69</span>
+      </a>
+      <div class="mobile-menu__socials">
+        <a href="https://t.me/+380931107980" target="_blank" rel="noopener noreferrer" class="mobile-menu__social mobile-menu__social--tg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Telegram
+        </a>
+        <a href="viber://chat?number=%2B380931107980" class="mobile-menu__social mobile-menu__social--viber">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Viber
+        </a>
+      </div>
+      <button class="btn btn--primary" id="mobileCta">Передзвонити</button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__pattern"></div>
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <h1 class="hero__title">Ворота-жалюзі, яким <span class="text-orange">не страшні дощ і сніг</span></h1>
+        <p class="hero__subtitle">Оцинкована сталь з полімерним покриттям. Виготовлення та монтаж під ключ.</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary btn--lg" id="heroCta">Дізнатися ціну</button>
+          <a href="#catalog" class="btn btn--outline-white btn--lg">Обрати модель</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__value">0 грн</div>
+            <div class="stat__label">Замір і консультація</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">Виробник</div>
+            <div class="stat__label">Без посередників</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">Під ключ</div>
+            <div class="stat__label">Від заміру до монтажу</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__image-wrap">
+        <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/hero.webp" alt="Сучасні ворота-жалюзі — виробництво та монтаж" class="hero__image" />
+        <div class="hero__image-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Переваги воріт-жалюзі</h2>
+        <p class="section-desc">Чому саме цей тип воріт обирають для приватного будинку</p>
+      </div>
+      <div class="benefits__grid">
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="benefit-card__title">Вітростійкість</h3>
+          <p class="benefit-card__desc">Ламелі пропускають повітря наскрізь — вітер не тисне на полотно. Петлі та механізм зношуються менше</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="benefit-card__title">Приватність</h3>
+          <p class="benefit-card__desc">Ламелі щільно прилягають одна до одної і закривають огляд. З вулиці не видно, що на подвір'ї</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3 class="benefit-card__title">Антикорозійне покриття</h3>
+          <p class="benefit-card__desc">Оцинкована сталь з полімерним шаром зверху. Витримує дощ, сніг і сонце — не ржавіє і не облазить</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 class="benefit-card__title">Автоматичне відкривання</h3>
+          <p class="benefit-card__desc">За бажанням встановлюємо електропривід з пультом. Відкриваєте ворота з машини — зручно в дощ і мороз</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CATALOG ===== -->
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Каталог</h2>
+        <p class="section-desc">Подивіться моделі та ціни — замовте розрахунок під свій розмір</p>
+      </div>
+      <div class="catalog__grid" id="catalogGrid">
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-1.webp" alt="Модель Prestige — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">2800</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Prestige</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Prestige" data-price="2800" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-1.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-2.webp" alt="Модель Classic — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">2200</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Classic</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Classic" data-price="2200" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-2.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-3.webp" alt="Модель Elegance — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">3200</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Elegance</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Elegance" data-price="3200" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-3.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-4.webp" alt="Модель Industrial — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">2500</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Industrial</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Industrial" data-price="2500" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-4.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-5.webp" alt="Модель Luxury — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">3600</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Luxury</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Luxury" data-price="3600" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-5.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-6.webp" alt="Модель Modern — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">2700</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Modern</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Modern" data-price="2700" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-6.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-7.webp" alt="Модель Privacy Plus — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">2950</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Privacy Plus</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Privacy Plus" data-price="2950" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-7.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-8.webp" alt="Модель Executive — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">3350</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Executive</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Executive" data-price="3350" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-8.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-9.webp" alt="Модель Security — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">2600</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Security</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Security" data-price="2600" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-9.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-10.webp" alt="Модель Designer — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">3100</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Designer</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Designer" data-price="3100" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-10.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-11.webp" alt="Модель Premium Elite — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">3900</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Premium Elite</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Premium Elite" data-price="3900" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-11.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-12.webp" alt="Модель Architect — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">3400</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Architect</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Architect" data-price="3400" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-12.webp">Замовити</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-card__img-wrap">
+            <img src="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-13.webp" alt="Модель Industrial Pro — ворота-жалюзі" class="product-card__img" width="600" height="400" />
+            <div class="product-card__price">
+              <span class="product-card__price-val">2800</span><span class="product-card__price-unit">грн/м²</span>
+            </div>
+          </div>
+          <div class="product-card__body">
+            <h3 class="product-card__title">Модель Industrial Pro</h3>
+            <button class="product-card__btn order-btn" data-title="Модель Industrial Pro" data-price="2800" data-image="https://pub-f3a9941318f24d6e90fda310a10cf7e4.r2.dev/product-13.webp">Замовити</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2 class="section-title">Як ми працюємо</h2>
+        <p class="section-desc">Від дзвінка до встановлення — 4 кроки</p>
+      </div>
+      <div class="process__grid">
+        <div class="process-step">
+          <div class="process-step__line"></div>
+          <div class="process-card">
+            <div class="process-card__num">01</div>
+            <div class="process-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+            </div>
+            <h3 class="process-card__title">Замір</h3>
+            <p class="process-card__desc">Приїжджаємо безкоштовно, вимірюємо проріз і визначаємо як краще встановити</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__line"></div>
+          <div class="process-card">
+            <div class="process-card__num">02</div>
+            <div class="process-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7-3-3z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="m2 2 7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </div>
+            <h3 class="process-card__title">Розрахунок</h3>
+            <p class="process-card__desc">Підбираємо модель і називаємо точну ціну під ваші розміри</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="process-step__line"></div>
+          <div class="process-card">
+            <div class="process-card__num">03</div>
+            <div class="process-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
+            </div>
+            <h3 class="process-card__title">Виготовлення</h3>
+            <p class="process-card__desc">Виготовляємо ворота під ваші розміри. Кожне замовлення індивідуальне</p>
+          </div>
+        </div>
+        <div class="process-step process-step--last">
+          <div class="process-card">
+            <div class="process-card__num">04</div>
+            <div class="process-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="process-card__title">Монтаж</h3>
+            <p class="process-card__desc">Встановлюємо виріб, за потреби підключаємо автоматику і перевіряємо роботу</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact__container">
+      <div class="section-header">
+        <h2 class="section-title">Розрахувати вартість</h2>
+        <p class="section-desc">Залиште номер — передзвонимо, порахуємо ціну під ваші розміри і відповімо на питання</p>
+      </div>
+      <div class="contact__card" id="contactCard">
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Ваше ім'я *</label>
+            <input type="text" id="contactName" required placeholder="Введіть ваше ім'я" />
+          </div>
+          <div class="form-group">
+            <label for="contactPhone">Номер телефону *</label>
+            <input type="tel" id="contactPhone" required placeholder="+38 (0__) ___-__-__" />
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--full">Надіслати заявку</button>
+        </form>
+        <div class="contact__success hidden" id="contactSuccess">
+          <div class="success-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <h3>Дякуємо за заявку!</h3>
+          <p>Зв'яжемося з вами найближчим часом</p>
+        </div>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <div class="trust-badge__value">Замір</div>
+          <div class="trust-badge__label">безкоштовно</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge__value">Ціна</div>
+          <div class="trust-badge__label">від виробника</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge__value">Розмір</div>
+          <div class="trust-badge__label">індивідуальний</div>
+        </div>
+        <div class="trust-badge">
+          <div class="trust-badge__value">Монтаж</div>
+          <div class="trust-badge__label">включено</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="logo logo--white">
+          <svg class="logo__icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="7" y="6" width="30" height="5" rx="1.5" fill="#FF8C00"/>
+            <rect x="7" y="11" width="3" height="27" fill="#fff"/>
+            <rect x="34" y="11" width="3" height="27" fill="#fff"/>
+            <rect x="10" y="12" width="24" height="3" rx=".5" fill="#fff"/>
+            <rect x="10" y="16.5" width="24" height="3" rx=".5" fill="#fff"/>
+            <rect x="10" y="21" width="24" height="3" rx=".5" fill="#fff"/>
+            <rect x="10" y="25.5" width="24" height="3" rx=".5" fill="#FF8C00" opacity=".85"/>
+            <rect x="10" y="30" width="24" height="3" rx=".5" fill="#FF8C00" opacity=".55"/>
+            <rect x="10" y="34.5" width="24" height="3" rx=".5" fill="#FF8C00" opacity=".3"/>
+            <line x1="5" y1="39" x2="39" y2="39" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+          </svg>
+          <span class="logo__text">
+            <span class="logo__title">Ворота</span>
+            <span class="logo__sub">Галичина</span>
+          </span>
+        </div>
+        <p class="footer__desc">Виготовлення та монтаж воріт-жалюзі з оцинкованої сталі</p>
+      </div>
+      <div class="footer__nav">
+        <h4>Навігація</h4>
+        <ul>
+          <li><a href="#catalog">Каталог</a></li>
+          <li><a href="#contact">Контакти</a></li>
+        </ul>
+      </div>
+      <div class="footer__contacts">
+        <h4>Контакти</h4>
+        <ul>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+380673705288">+38 (067) 370-52-88</a>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF8C00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+380931107969">+38 (093) 110-79-69</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer__bottom">&copy; 2026 Ворота Галичина. Всі права захищені.</div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING CONTACT ===== -->
+  <div class="floating" id="floating">
+    <div class="floating__menu hidden" id="floatingMenu">
+      <a href="https://t.me/+380931107980" target="_blank" rel="noopener noreferrer" class="floating__item floating__item--tg">
+        <span class="floating__item-icon floating__item-icon--tg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </span>
+        Telegram
+      </a>
+      <a href="viber://chat?number=%2B380931107980" class="floating__item floating__item--viber">
+        <span class="floating__item-icon floating__item-icon--viber">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </span>
+        Viber
+      </a>
+      <button class="floating__item floating__item--phone" id="floatingCallback">
+        <span class="floating__item-icon floating__item-icon--phone">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        Передзвоніть мені
+      </button>
+    </div>
+    <button class="floating__btn" id="floatingBtn" aria-label="Контакти">
+      <svg class="floating__btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </button>
+  </div>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal-overlay hidden" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal__close" id="modalClose" aria-label="Закрити">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div id="modalFormWrap">
+        <h3 class="modal__title">Залишити заявку</h3>
+        <p class="modal__desc">Передзвонимо, порахуємо вартість під ваші розміри і відповімо на питання</p>
+        <form class="modal__form" id="modalForm">
+          <div class="form-group">
+            <label for="modalName">Ім'я</label>
+            <input type="text" id="modalName" required placeholder="Введіть ваше ім'я" />
+          </div>
+          <div class="form-group">
+            <label for="modalPhone">Телефон</label>
+            <input type="tel" id="modalPhone" required placeholder="+38 (0__) ___-__-__" />
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--full">Надіслати заявку</button>
+        </form>
+      </div>
+      <div class="modal__success hidden" id="modalSuccess">
+        <div class="success-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3>Дякуємо!</h3>
+        <p>Ваша заявка прийнята. Зв'яжемося з вами найближчим часом.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
