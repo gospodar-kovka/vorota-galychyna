@@ -1,6 +1,7 @@
 /* ===== RESET & BASE ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;scroll-behavior:smooth}
+html{font-size:16px;scroll-behavior:smooth;scroll-padding-top:72px}
+@media(min-width:1024px){html{scroll-padding-top:88px}}
 body{font-family:'Inter',sans-serif;color:#2C2E30;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
@@ -60,12 +61,12 @@ input{font-family:inherit}
 
 .mobile-menu{display:none;padding:16px;border-top:1px solid #e5e7eb;flex-direction:column;gap:16px}
 .mobile-menu.open{display:flex}
-.mobile-menu__socials{display:flex;gap:12px}
-.mobile-menu__social{display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-size:.9rem;font-weight:500;color:#fff;transition:opacity .2s}
-.mobile-menu__social:hover{opacity:.85}
-.mobile-menu__social svg{flex-shrink:0;stroke:#fff}
-.mobile-menu__social--tg{background:#0088cc}
-.mobile-menu__social--viber{background:#665CAC}
+.mobile-menu__contacts{display:flex;flex-direction:column;gap:12px}
+.mobile-menu__contact-item{display:flex;align-items:center;gap:10px;font-size:.95rem;color:#374151;text-decoration:none;transition:opacity .2s}
+.mobile-menu__contact-item:hover{color:#FF8C00}
+.mobile-menu__contact-item[href*="viber"]:hover{color:#7360F2}
+.mobile-menu__contact-item[href*="t.me"]:hover{color:#2AABEE}
+.mobile-menu__contact-item svg{flex-shrink:0}
 @media(min-width:768px){.mobile-menu{display:none!important}}
 
 /* ===== LOGO ===== */
@@ -118,11 +119,11 @@ input{font-family:inherit}
 @media(min-width:640px){.benefits__grid{grid-template-columns:1fr 1fr;gap:24px}}
 @media(min-width:1024px){.benefits__grid{grid-template-columns:repeat(4,1fr);gap:32px}}
 
-.benefit-card{background:#fff;padding:24px;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,.07);text-align:center;transition:box-shadow .3s}
+.benefit-card{background:#fff;padding:20px;border-radius:12px;box-shadow:0 4px 6px rgba(0,0,0,.07);text-align:center;transition:box-shadow .3s;display:flex;flex-direction:column;align-items:center}
 .benefit-card:hover{box-shadow:0 10px 25px rgba(0,0,0,.12)}
-.benefit-card__icon{width:64px;height:64px;border-radius:50%;background:rgba(255,140,0,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transition:background .3s}
+.benefit-card__icon{width:64px;height:64px;border-radius:50%;background:rgba(255,140,0,.1);display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background .3s}
 .benefit-card:hover .benefit-card__icon{background:rgba(255,140,0,.2)}
-.benefit-card__title{font-size:20px;font-weight:600;margin-bottom:8px}
+.benefit-card__title{font-size:18px;font-weight:600;margin-bottom:6px}
 .benefit-card__desc{color:#4b5563;font-size:15px}
 
 /* ===== CATALOG ===== */
@@ -215,9 +216,9 @@ input{font-family:inherit}
 .footer{background:#2C2E30;color:#fff;padding:32px 0}
 @media(min-width:640px){.footer{padding:48px 0}}
 .footer__grid{display:grid;gap:32px;margin-bottom:32px}
-@media(min-width:768px){.footer__grid{grid-template-columns:1fr 1fr 1fr}}
-.footer__desc{color:#9ca3af;margin-top:16px;font-size:15px}
-.footer__nav h4,.footer__contacts h4{font-weight:600;font-size:18px;margin-bottom:16px}
+@media(min-width:768px){.footer__grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.footer__desc{color:#9ca3af;margin-top:16px;font-size:14px;max-width:280px;line-height:1.5}
+.footer__nav h4,.footer__contacts h4,.footer__location h4{font-weight:600;font-size:18px;margin-bottom:16px}
 .footer__nav ul{display:flex;flex-direction:column;gap:8px}
 .footer__nav a{color:#9ca3af;transition:color .2s}
 .footer__nav a:hover{color:#FF8C00}
@@ -225,6 +226,9 @@ input{font-family:inherit}
 .footer__contacts li{display:flex;align-items:center;gap:8px;color:#9ca3af}
 .footer__contacts a{color:#9ca3af;transition:color .2s}
 .footer__contacts a:hover{color:#fff}
+.footer__location ul{display:flex;flex-direction:column;gap:12px}
+.footer__location li{display:flex;align-items:flex-start;gap:8px;color:#9ca3af}
+.footer__location svg{flex-shrink:0;margin-top:2px}
 .footer__bottom{border-top:1px solid #374151;padding-top:32px;text-align:center;color:#9ca3af;font-size:14px}
 
 /* ===== FLOATING CONTACT ===== */
