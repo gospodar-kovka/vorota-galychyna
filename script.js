@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalFormWrap.classList.add('hidden');
     modalSuccess.classList.remove('hidden');
-    setTimeout(closeModal, 2000);
+    setTimeout(closeModal, 4000);
   });
 
   document.getElementById('headerCta').addEventListener('click', () => openModal());
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contactSuccess.classList.add('hidden');
       contactForm.classList.remove('hidden');
       contactForm.reset();
-    }, 3000);
+    }, 4000);
   });
 
   /* ===== FLOATING CONTACT ===== */
