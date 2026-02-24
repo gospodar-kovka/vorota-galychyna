@@ -29,11 +29,19 @@ jobs:
       - name: Install minifiers
         run: npm install -g html-minifier-terser clean-css-cli terser
 
+      - name: Cache-bust CSS & JS
+        run: |
+          HASH=$(git rev-parse --short HEAD)
+          mv styles.css "styles.${HASH}.css"
+          mv script.js "script.${HASH}.js"
+          sed -i "s|styles.css|styles.${HASH}.css|g" index.html
+          sed -i "s|script.js|script.${HASH}.js|g" index.html
+
       - name: Minify CSS
-        run: cleancss -o styles.css styles.css
+        run: HASH=$(git rev-parse --short HEAD) && cleancss -o "styles.${HASH}.css" "styles.${HASH}.css"
 
       - name: Minify JS
-        run: terser script.js -o script.js -c -m
+        run: HASH=$(git rev-parse --short HEAD) && terser "script.${HASH}.js" -o "script.${HASH}.js" -c -m
 
       - name: Minify HTML
         run: |
@@ -43,6 +51,11 @@ jobs:
             --minify-css true \
             --minify-js true \
             -o index.html
+          html-minifier-terser 404.html \
+            --collapse-whitespace \
+            --remove-comments \
+            --minify-css true \
+            -o 404.html
 
       - uses: actions/configure-pages@v5
 
