@@ -10,34 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ===== TELEGRAM CONFIG ===== */
-  const TG_BOT_TOKEN = '8326596673:AAGry0yITlOAEc6gGf4pA439zc4gL8PrfD0';
-  const TG_CHAT_ID = '-5146109233';
+  /* ===== TELEGRAM PROXY ===== */
+  const TG_WORKER = 'https://tg-proxy.rostislavtruhim013.workers.dev';
 
   async function sendToTelegram(text, imageUrl) {
     try {
-      if (imageUrl) {
-        await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendPhoto`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: TG_CHAT_ID,
-            photo: imageUrl,
-            caption: text,
-            parse_mode: 'HTML'
-          })
-        });
-      } else {
-        await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: TG_CHAT_ID,
-            text: text,
-            parse_mode: 'HTML'
-          })
-        });
-      }
+      await fetch(TG_WORKER, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: imageUrl ? 'photo' : 'message',
+          text: text,
+          imageUrl: imageUrl || null
+        })
+      });
     } catch (err) {
       console.error('Telegram error:', err);
     }
@@ -252,6 +238,50 @@ document.addEventListener('DOMContentLoaded', () => {
       floatingMenu.classList.add('hidden');
       floatingBtn.classList.remove('active');
     }
+  });
+
+  /* ===== FAQ ACCORDION ===== */
+  const faqPadding = window.innerWidth >= 640 ? 20 : 16;
+
+  document.querySelectorAll('.faq__item').forEach(item => {
+    const summary = item.querySelector('.faq__question');
+    const answer = item.querySelector('.faq__answer');
+
+    summary.addEventListener('click', e => {
+      e.preventDefault();
+      if (item.open) {
+        item.classList.remove('faq__item--open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        answer.style.paddingBottom = faqPadding + 'px';
+        requestAnimationFrame(() => {
+          answer.style.maxHeight = '0';
+          answer.style.paddingBottom = '0';
+        });
+        answer.addEventListener('transitionend', function handler(ev) {
+          if (ev.propertyName !== 'max-height') return;
+          answer.removeEventListener('transitionend', handler);
+          item.open = false;
+          answer.style.removeProperty('max-height');
+          answer.style.removeProperty('padding-bottom');
+        });
+      } else {
+        item.open = true;
+        item.classList.add('faq__item--open');
+        answer.style.maxHeight = '0';
+        answer.style.paddingBottom = '0';
+        const h = answer.scrollHeight + faqPadding;
+        requestAnimationFrame(() => {
+          answer.style.maxHeight = h + 'px';
+          answer.style.paddingBottom = faqPadding + 'px';
+        });
+        answer.addEventListener('transitionend', function handler(ev) {
+          if (ev.propertyName !== 'max-height') return;
+          answer.removeEventListener('transitionend', handler);
+          answer.style.removeProperty('max-height');
+          answer.style.removeProperty('padding-bottom');
+        });
+      }
+    });
   });
 
 });
