@@ -31,38 +31,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ===== PHONE MASK ===== */
   function initPhoneMask(input) {
+    function normalize(val) {
+      let d = val.replace(/\D/g, '');
+      if (d.startsWith('380')) d = d.slice(3);
+      else if (d.startsWith('38')) d = d.slice(2);
+      else if (d.startsWith('80') && d.length > 2) d = d.slice(2);
+      else if (d.startsWith('0')) d = d.slice(1);
+      return d.slice(0, 9);
+    }
+
+    function format(d) {
+      if (d.length === 0) return '+38 (0';
+      if (d.length <= 2) return '+38 (0' + d;
+      if (d.length <= 5) return '+38 (0' + d.slice(0, 2) + ') ' + d.slice(2);
+      if (d.length <= 7) return '+38 (0' + d.slice(0, 2) + ') ' + d.slice(2, 5) + '-' + d.slice(5);
+      return '+38 (0' + d.slice(0, 2) + ') ' + d.slice(2, 5) + '-' + d.slice(5, 7) + '-' + d.slice(7);
+    }
+
+    function apply(digits) {
+      const formatted = format(digits);
+      input.value = formatted;
+      input.setSelectionRange(formatted.length, formatted.length);
+    }
+
     input.addEventListener('focus', () => {
-      if (!input.value) input.value = '+38 (0';
+      if (!input.value) {
+        input.value = '+38 (0';
+        setTimeout(() => input.setSelectionRange(6, 6), 0);
+      }
     });
 
-    input.addEventListener('input', () => {
-      let raw = input.value.replace(/\D/g, '');
-      if (raw.startsWith('380')) raw = raw.slice(3);
-      else if (raw.startsWith('38')) raw = raw.slice(2);
-      else if (raw.startsWith('0')) raw = raw.slice(1);
+    input.addEventListener('beforeinput', (e) => {
+      if (e.inputType === 'insertFromPaste') return;
+      if (e.inputType && e.inputType.startsWith('insert') && e.data) {
+        e.preventDefault();
+        const newDigits = e.data.replace(/\D/g, '');
+        if (!newDigits) return;
+        const current = normalize(input.value);
+        const combined = current + newDigits;
+        apply(combined.slice(0, 9));
+      }
+    });
 
-      raw = raw.slice(0, 9);
-
-      let formatted = '+38 (0';
-      if (raw.length > 0) formatted += raw.substring(0, 2);
-      if (raw.length >= 2) formatted += ') ';
-      if (raw.length > 2) formatted += raw.substring(2, 5);
-      if (raw.length >= 5) formatted += '-';
-      if (raw.length > 5) formatted += raw.substring(5, 7);
-      if (raw.length >= 7) formatted += '-';
-      if (raw.length > 7) formatted += raw.substring(7, 9);
-
-      input.value = formatted;
+    input.addEventListener('input', (e) => {
+      apply(normalize(input.value));
     });
 
     input.addEventListener('keydown', (e) => {
-      if (e.key === 'Backspace' && input.value.length <= 6) {
+      if (e.key === 'Backspace') {
+        e.preventDefault();
+        const d = normalize(input.value);
+        if (d.length === 0) return;
+        apply(d.slice(0, -1));
+      }
+      if (e.key === 'Delete') {
         e.preventDefault();
       }
     });
 
     input.addEventListener('blur', () => {
-      if (input.value === '+38 (0') input.value = '';
+      if (normalize(input.value).length === 0) input.value = '';
+    });
+
+    input.addEventListener('click', () => {
+      const len = input.value.length;
+      input.setSelectionRange(len, len);
     });
   }
 
