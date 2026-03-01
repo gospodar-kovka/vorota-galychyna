@@ -190,6 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     await sendToTelegram(text, imageUrl);
+    if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
 
     modalFormWrap.classList.add('hidden');
     modalSuccess.classList.remove('hidden');
@@ -240,6 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const text = `📮 <b>Зворотній дзвінок</b>\n\n🧑 Ім'я: ${name}\n📞 Телефон: ${phone}`;
     await sendToTelegram(text);
+    if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
 
     contactForm.classList.add('hidden');
     contactSuccess.classList.remove('hidden');
