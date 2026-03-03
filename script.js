@@ -319,4 +319,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ===== PHONE CLICK CONVERSION TRACKING ===== */
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+    link.addEventListener('click', () => {
+      if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
+    });
+  });
+
 });
