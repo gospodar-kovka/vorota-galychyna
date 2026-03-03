@@ -13,6 +13,20 @@
     gtag('js', new Date());
     gtag('config', 'AW-17990534019');
   </script>
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17990534019/dj_bCOz3nIIcEIOHx4JD',
+        'value': 1.0,
+        'currency': 'UAH',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 
   <title>Ворота-жалюзі та огорожі від виробника — купити | Ворота Галичина</title>
   <meta name="description" content="Ворота-жалюзі, огорожі та хвіртки від виробника — оцинкована сталь з полімерним покриттям. Виготовлення під розмір, монтаж під ключ, безкоштовний замір." />
