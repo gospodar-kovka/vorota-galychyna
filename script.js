@@ -325,6 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="tel:"]').forEach(link => {
     link.addEventListener('click', () => {
       if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
+      if (typeof gtag === 'function') gtag('event', 'contact', { event_category: 'phone', event_label: link.href });
     });
   });
 
