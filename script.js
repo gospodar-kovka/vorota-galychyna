@@ -341,4 +341,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ===== REVIEWS CAROUSEL ===== */
+  const rTrack = document.querySelector('.reviews__track');
+  const rLeft = document.querySelector('.reviews__arrow--left');
+  const rRight = document.querySelector('.reviews__arrow--right');
+  const rCounter = document.querySelector('.reviews__counter');
+  if (rTrack && rLeft && rRight) {
+    const rCards = Array.from(rTrack.querySelectorAll('.review-card'));
+    const total = rCards.length;
+    const gapPx = () => parseFloat(getComputedStyle(rTrack).gap) || 0;
+    const step = () => rCards[0].offsetWidth + gapPx();
+    const perView = () => Math.max(1, Math.round(rTrack.offsetWidth / step()));
+    const firstIdx = () => Math.round(rTrack.scrollLeft / step());
+    const maxFirst = () => Math.max(0, total - perView());
+    const goTo = (i) => {
+      const idx = Math.max(0, Math.min(i, maxFirst()));
+      rTrack.scrollTo({ left: idx * step(), behavior: 'smooth' });
+    };
+    const update = () => {
+      const idx = firstIdx();
+      const pv = perView();
+      const pages = Math.ceil(total / pv);
+      const page = Math.min(Math.floor(idx / pv) + 1, pages);
+      rLeft.disabled = idx <= 0;
+      rRight.disabled = idx >= maxFirst();
+      if (rCounter) rCounter.textContent = page + ' / ' + pages;
+    };
+    rLeft.addEventListener('click', () => goTo(firstIdx() - perView()));
+    rRight.addEventListener('click', () => goTo(firstIdx() + perView()));
+    rTrack.addEventListener('scroll', update, { passive: true });
+    update();
+    new ResizeObserver(update).observe(rTrack);
+  }
+
 });
