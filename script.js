@@ -190,8 +190,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     await sendToTelegram(text, imageUrl);
+    if (typeof gtag === 'function') {
+      gtag('set', 'user_data', { phone_number: phone.replace(/[^\d+]/g, '') });
+      gtag('event', 'generate_lead', { event_category: 'form', event_label: 'modal_form' });
+    }
     if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
-    if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'form', event_label: 'modal_form' });
 
     modalFormWrap.classList.add('hidden');
     modalSuccess.classList.remove('hidden');
@@ -242,8 +245,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const text = `📮 <b>Зворотній дзвінок</b>\n\n🧑 Ім'я: ${name}\n📞 Телефон: ${phone}`;
     await sendToTelegram(text);
+    if (typeof gtag === 'function') {
+      gtag('set', 'user_data', { phone_number: phone.replace(/[^\d+]/g, '') });
+      gtag('event', 'generate_lead', { event_category: 'form', event_label: 'contact_form' });
+    }
     if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
-    if (typeof gtag === 'function') gtag('event', 'generate_lead', { event_category: 'form', event_label: 'contact_form' });
 
     contactForm.classList.add('hidden');
     contactSuccess.classList.remove('hidden');
